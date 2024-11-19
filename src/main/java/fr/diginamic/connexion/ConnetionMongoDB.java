@@ -4,7 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
-public class ConnexionMongoDB {
+public class ConnetionMongoDB {
     private MongoClient mongoClient;
     private MongoDatabase database;
 
