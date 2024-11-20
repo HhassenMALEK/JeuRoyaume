@@ -43,7 +43,7 @@ public class GestionRessources {
         System.out.println("Ressource " + type + " mise à jour avec succès");
     }
 
-    public boolean verfierResources(String type, int quantiteNecessaire){
+    public boolean verifierResources(String type, int quantiteNecessaire){
 
         Document ressource = ressources.find(new Document("type,", type)).first();
         if(ressource != null) {
