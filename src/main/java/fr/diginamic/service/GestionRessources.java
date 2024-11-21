@@ -27,7 +27,7 @@ public class GestionRessources {
         }
     }
 
-    public void afficherRessource(){
+    public void afficherRessources(){
         for (Document ressource : ressources.find()) {
             System.out.println(ressource.toJson());
         }

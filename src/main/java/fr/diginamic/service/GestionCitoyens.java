@@ -68,6 +68,11 @@ public class GestionCitoyens {
         }
     }
 
+    public void supprimerCitoyens(String nom){
+        citoyens.deleteOne(new Document("nom", nom));
+        System.out.println("Citoyen " + nom+ " supprimée avec succès");
+    }
+
     // Méthode pour vérifier les citoyens
 
     public boolean verifierCitoyens(String role, int quatiteNecessaire){
