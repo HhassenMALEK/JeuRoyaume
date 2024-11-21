@@ -36,7 +36,7 @@ public class GestionBatiments {
 
     //Methode pour constrruire un batiment
     public void construireBatiment(String type, int coutBois, int coutPierre, String fonction) {
-        if(gestionRessources.verifierResources("Bois", coutBois) && gestionRessources.verifierResources("Pierre", coutPierre)){
+        if(gestionRessources.verifierRessources("Bois", coutBois) && gestionRessources.verifierRessources("Pierre", coutPierre)){
             //deduire les ressources pour la construction
             gestionRessources.mettreAJourRessource("Bois", -coutBois);
             gestionRessources.mettreAJourRessource("Pierre", -coutPierre);
@@ -64,7 +64,7 @@ public class GestionBatiments {
             int coutBois = niveauSuivant * 200;
             int coutPierre = niveauSuivant * 100;
 
-        if(gestionRessources.verifierResources("Bois", -coutBois) && gestionRessources.verifierResources("Pierre", -coutPierre)){
+        if(gestionRessources.verifierRessources("Bois", -coutBois) && gestionRessources.verifierRessources("Pierre", -coutPierre)){
 
             //deduire les ressources pour la mise à jour
             gestionRessources.mettreAJourRessource("Bois", -coutBois);

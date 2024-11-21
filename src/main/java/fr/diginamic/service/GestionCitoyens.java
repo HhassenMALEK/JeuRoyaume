@@ -70,13 +70,13 @@ public class GestionCitoyens {
 
     // Méthode pour vérifier les citoyens
 
-    public boolean verifierCitoyens(String type, int quatiteNecessaire){
+    public boolean verifierCitoyens(String role, int quatiteNecessaire){
         //Récuper le document le plus récent
-        Document citoyen = citoyens.find(new Document("type", type)).sort(Sorts.descending("_id")).first();
+        Document citoyen = citoyens.find(new Document("type", role)).sort(Sorts.descending("_id")).first();
         int quantiteDisponible = citoyen.getInteger("quantite");
         if(citoyens !=null){
-            System.out.println("Quantité disponible de " + type + ":" + quantiteDisponible);
-            System.out.println("Quantité necessaire de " + type + ":" + quatiteNecessaire);
+            System.out.println("Quantité disponible de " + role + ":" + quantiteDisponible);
+            System.out.println("Quantité necessaire de " + role + ":" + quatiteNecessaire);
             return quantiteDisponible >= quatiteNecessaire;
         }
         return false;
